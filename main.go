@@ -1,9 +1,11 @@
 package main
 
 import (
+	"fmt"
 	bcrypt "github.com/memcachier/bcrypt"
 )
 
 func main() {
-	_, _ := bcrypt.Crypt("A", "B")
+	hash, err := bcrypt.Crypt("A", bcrypt.BcryptSalt("B"))
+	fmt.Printf("%v\n", hash, err)
 }
