@@ -1,12 +1,9 @@
 package main
 
 import (
-	"fmt"
-
-
+	bcrypt "github.com/memcachier/bcrypt"
 )
 
 func main() {
-	//_, _ := bcrypt.Crypt("A", "B")
-	fmt.Printf("F\n")
+	_, _ := bcrypt.Crypt("A", "B")
 }
